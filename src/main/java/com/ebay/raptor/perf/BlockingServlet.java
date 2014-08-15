@@ -21,8 +21,9 @@ public class BlockingServlet extends HttpServlet{
     	
         
         String simpleParam = getServletConfig().getInitParameter("simpleParam");
-        String sleepTime = (String) request.getAttribute("sleep");
-        int sleepMillis = Util.convertToMillis(sleepTime);
+        //String sleepTime = (String) request.getAttribute("sleep");
+        String sleeptime= request.getQueryString();
+        int sleepMillis = Util.convertToMillis(sleeptime);
         
         try {
 			Thread.currentThread().sleep(sleepMillis);

@@ -7,7 +7,8 @@ public class Util {
 		try{
 			millis = Integer.parseInt(time);
 		}catch( NumberFormatException nfe){
-			
+			System.out.println(""+ nfe.getMessage()  );
+			nfe.printStackTrace();
 		}
 		return millis;
 	}
